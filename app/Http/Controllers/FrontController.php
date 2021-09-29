@@ -7,13 +7,13 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 
-class Controller extends BaseController
+class FrontController extends Controller
 {
-    protected ?string $route = "pages/404";
-
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    protected ?string $route = "pages.front";
 
     public function init(){
-        return view($this->route, []);
+        $data = [];
+
+        return view($this->route, $data);
     }
 }
