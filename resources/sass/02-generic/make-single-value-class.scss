@@ -1,0 +1,23 @@
+@mixin make-single-value-class($prefix, $suffix, $property, $value, $replace-property-string: false, $replace-value-string: false){
+    $property-string: $property;
+    $value-string: $value;
+    @if($replace-property-string != false) {
+        @if ( $replace-property-string != "" ) {
+            $property-string: $replace-property-string;
+        }
+    }
+    @if($replace-value-string != false) {
+        @if ( $replace-value-string != "" ) {
+            $value-string: "-" + $replace-value-string;
+        } @else {
+            $value-string: "";
+        }
+    } @else {
+        $value-string: "-" + $value-string;
+    }
+    $class-name: $prefix + $property-string + $value-string + $suffix;
+    .#{$class-name} {
+        #{$property}: $value;
+        @content;
+    }
+};

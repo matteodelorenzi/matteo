@@ -1,0 +1,38 @@
+$BREAKPOINT-TYPE-MIN: "min";
+$BREAKPOINT-TYPE-MAX: "max";
+
+@mixin for-each-breakpoint-min() {
+    @each $breakpoint in $breakpoints {
+        $bp-name: nth($breakpoint, 1);
+        $bp-width: nth($breakpoint, 2);
+        @include bp-min-width($bp-width * 1px) {
+            &#{"\\@min-" + $bp-name} {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin for-each-breakpoint-max() {
+    @each $breakpoint in $breakpoints {
+        $bp-name: nth($breakpoint, 1);
+        $bp-width: nth($breakpoint, 2);
+        @include bp-max-width($bp-width) {
+            &#{"\\@" + $bp-name} {
+                @content;
+            }
+        }
+    }
+}
+
+@mixin for-each-breakpoint($type: $BREAKPOINT-TYPE-MAX){
+    @if($type == "max") {
+        @include for-each-breakpoint-max(){
+            @content;
+        }
+    } @else if($type == "min") {
+        @include for-each-breakpoint-min(){
+            @content;
+        }
+    }
+}

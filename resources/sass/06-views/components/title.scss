@@ -1,0 +1,73 @@
+/*
+ * Auto generate classes for title and auto generate size title in text-content
+ * class generate : '_#{name}'
+*/
+$font-weight: ("700");
+$font-size-default: 3.2rem;
+$font-sizes: (
+    /* H1 */ "extra-big" : 7.2rem,
+    /* H2 */ "big" : 6.4rem,
+    /* H3 */ "medium" : 4.6rem,
+    /* H4 */ "default" : $font-size-default,
+    /* H5 */ "small" : 1.8rem,
+    /* H6 */ "tiny" : 1.6rem,
+    /* Extra text-content */
+);
+$colors: (
+    "white" : white
+);
+
+@mixin title-base(){
+    margin: 0;
+    font-family: $typography-font-family-secondary;
+    font-size: $font-size-default;
+    line-height: 1.2;
+    font-weight: 400;
+    color: $color-main;
+
+    @include bp-max-width($bp-mobile) {
+        font-size: calc(#{$font-size-default} / 1.05);
+    }
+}
+
+.title{
+    @include title-base;
+
+    /* Font-size */
+    @each $name, $size in $font-sizes {
+        &._#{$name}{
+            font-size: #{$size};
+
+            @include bp-max-width($bp-mobile) {
+                @if $size > 5{
+                    font-size: calc(#{$size} / 1.3);
+                }@else{
+                    font-size: calc(#{$size} / 1.05);
+                }
+            }
+        }
+    }
+
+    /* Font-weight */
+    @each $weight in $font-weight {
+        &._#{$weight}{
+            font-weight: #{$weight};
+        }
+    }
+
+    /* Colors */
+    @each $name, $color in $colors {
+        &._#{$name}{
+            color: $color;
+        }
+    }
+
+    /* Utils */
+    &._center{
+        text-align: center;
+    }
+
+    &._uppercase{
+        text-transform: uppercase;
+    }
+}

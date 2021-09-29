@@ -1,0 +1,17 @@
+$bp-hd: 1920;
+$bp-wide: 1380;
+$bp-desktop: 1020;
+$bp-tablet: 768;
+$bp-phablet: 640;
+$bp-mobile: 480;
+$bp-menu: 1300;
+
+$breakpoints: (
+    hd: $bp-hd,
+    wide: $bp-wide,
+    desktop: $bp-desktop,
+    tablet: $bp-tablet,
+    phablet: $bp-phablet,
+    mobile: $bp-mobile,
+    menu: $bp-menu,
+);

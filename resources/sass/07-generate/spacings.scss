@@ -1,0 +1,26 @@
+$UTILITY-CLASS-PREFIX: u-;
+
+@each $spacing in $spacings {
+    @include make-single-value-class($UTILITY-CLASS-PREFIX, "", margin-top, $spacing * .1rem, mt, $spacing);
+    @include make-single-value-class($UTILITY-CLASS-PREFIX, "", margin-bottom, $spacing * .1rem, mb, $spacing);
+    @include make-single-value-class($UTILITY-CLASS-PREFIX, "", margin-left, $spacing * .1rem, ml, $spacing);
+    @include make-single-value-class($UTILITY-CLASS-PREFIX, "", margin-right, $spacing * .1rem, mr, $spacing);
+    @include make-single-value-class($UTILITY-CLASS-PREFIX, "", padding-top, $spacing * .1rem, pt, $spacing);
+    @include make-single-value-class($UTILITY-CLASS-PREFIX, "", padding-bottom, $spacing * .1rem, pb, $spacing);
+}
+
+@each $breakpoint in $breakpoints {
+    $bp-name: nth($breakpoint, 1);
+    $bp-width: nth($breakpoint, 2);
+    @include bp-max-width($bp-width) {
+        @each $spacing in $spacings {
+            $suffix: "\\@" + $bp-name;
+            @include make-single-value-class($UTILITY-CLASS-PREFIX, $suffix, margin-top, $spacing * .1rem, mt, $spacing);
+            @include make-single-value-class($UTILITY-CLASS-PREFIX, $suffix, margin-bottom, $spacing * .1rem, mb, $spacing);
+            @include make-single-value-class($UTILITY-CLASS-PREFIX, $suffix, margin-left, $spacing * .1rem, ml, $spacing);
+            @include make-single-value-class($UTILITY-CLASS-PREFIX, $suffix, margin-right, $spacing * .1rem, mr, $spacing);
+            @include make-single-value-class($UTILITY-CLASS-PREFIX, $suffix, padding-top, $spacing * .1rem, pt, $spacing);
+            @include make-single-value-class($UTILITY-CLASS-PREFIX, $suffix, padding-bottom, $spacing * .1rem, pb, $spacing);
+        }
+    }
+}

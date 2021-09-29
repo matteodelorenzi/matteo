@@ -1,0 +1,15 @@
+/*
+ * Reset style button
+ * Usage:
+ * @include reset-style-button();
+ */
+
+@mixin reset-style-button(){
+    font-family: $typography-font-family-main;
+    -webkit-appearance: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+}

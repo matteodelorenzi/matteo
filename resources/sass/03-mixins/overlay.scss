@@ -1,0 +1,19 @@
+/*
+ * Overlay
+ * Usage:
+   @include overlay("horizontal", red, blue);
+ */
+
+@mixin overlay($direction: "horizontal", $color1: black, $color2: black){
+    position: relative;
+
+    @include before{
+        pointer-events: none;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include gradient($direction, $color1, $color2);
+    }
+}

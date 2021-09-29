@@ -1,0 +1,5 @@
+.grid {
+    @include grid();
+}
+
+@include make-grid-classes($max-column: 12);

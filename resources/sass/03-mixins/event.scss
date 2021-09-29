@@ -1,0 +1,18 @@
+/*
+ * Event
+ * Usage:
+ * @include event {
+ *   color: rebeccapurple;
+ * }
+ */
+
+@mixin event() {
+  outline: none;
+
+  @include bp-min-width($bp-mobile) {
+    &:hover,
+    &:active {
+      @content;
+    }
+  }
+}

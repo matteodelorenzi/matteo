@@ -1,0 +1,13 @@
+/*
+ * Not last child
+ * Usage:
+   @include not-last-child(){
+       @content
+   }
+ */
+
+@mixin not-last-child(){
+    &:not(:last-child){
+        @content
+    }
+}

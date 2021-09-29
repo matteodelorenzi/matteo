@@ -1,0 +1,12 @@
+/*
+ * Background image
+ * Usage:
+ * @include background-image("file.jpg", contain, center, $path-svg);
+ */
+
+@mixin background-image($file, $size:contain, $position: center, $path: $path-svg) {
+    background-image: url($path + $file);
+    background-size: $size;
+    background-position: $position;
+    background-repeat: no-repeat;
+}

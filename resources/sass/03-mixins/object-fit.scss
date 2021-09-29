@@ -1,0 +1,12 @@
+/*
+ * Object fit
+ * Usage:
+   @include object-fit(cover, top);
+ */
+
+@mixin object-fit($fit:cover, $position:center) {
+    img {
+        object-fit: $fit;
+        object-position: $position;
+    }
+}

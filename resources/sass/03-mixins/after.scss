@@ -1,0 +1,14 @@
+/*
+ * After
+ * Usage:
+   @include after(){
+      @content
+   };
+ */
+
+@mixin after(){
+    &:after{
+        content: '';
+        @content
+    }
+}

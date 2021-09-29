@@ -1,0 +1,19 @@
+@mixin wrap($wrapper-size: $grid-container-wrap, $paddings: true){
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @if($paddings){
+        max-width: (($wrapper-size + ($grid-default-gutter * 2)) / 10) * 1rem;
+        padding-left: $grid-default-gutter * .1rem;
+        padding-right: $grid-default-gutter * .1rem;
+
+        @include bp-max-width($bp-mobile) {
+            max-width: (($wrapper-size + ($grid-default-gutter-mobile * 2)) / 10) * 1rem;
+            padding-left: $grid-default-gutter-mobile * .1rem;
+            padding-right: $grid-default-gutter-mobile * .1rem;
+        }
+    }@else{
+        max-width: ($wrapper-size / 10) * 1rem;
+    }
+}

@@ -1,0 +1,22 @@
+/*
+ * Visibility hidden
+ * Usage:
+   @include visibility-hidden;
+ * Use for referencement
+ */
+
+@mixin visibility-hidden(){
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+}
+
+.u-visibility-hidden{
+    @include visibility-hidden;
+}

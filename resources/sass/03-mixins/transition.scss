@@ -1,0 +1,11 @@
+/*
+ * Transition
+ * Usage:
+   @include transition(200ms, all, ease-in-out);
+*/
+
+@mixin transition($duration:400ms, $type:all, $ease: ease-in-out){
+    transition-property: $type;
+    transition-duration: $duration;
+    transition-timing-function: $ease;
+}
