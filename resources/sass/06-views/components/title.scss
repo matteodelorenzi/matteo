@@ -2,16 +2,15 @@
  * Auto generate classes for title and auto generate size title in text-content
  * class generate : '_#{name}'
 */
-$font-weight: ("700");
+$font-weight: ("300", "700");
 $font-size-default: 3.2rem;
 $font-sizes: (
-    /* H1 */ "extra-big" : 7.2rem,
-    /* H2 */ "big" : 6.4rem,
-    /* H3 */ "medium" : 4.6rem,
-    /* H4 */ "default" : $font-size-default,
-    /* H5 */ "small" : 1.8rem,
-    /* H6 */ "tiny" : 1.6rem,
-    /* Extra text-content */
+    "extra-big" : 8rem,
+    "big" : 6.5rem,
+    "medium" : 4.6rem,
+    "default" : $font-size-default,
+    "small" : 1.8rem,
+    "tiny" : 1.6rem,
 );
 $colors: (
     "white" : white

@@ -1,5 +1,5 @@
 @extends("layouts.main")
 
 @section("content")
-    <p>Hello</p>
+    @component("components.sections.contact")@endcomponent
 @endsection

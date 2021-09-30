@@ -14,7 +14,7 @@ const sassGlobImporter = require('node-sass-glob-importer');
 
 mix.js('resources/js/app.ts', 'public/js')
     .sourceMaps(false, 'source-map')
-    .browserSync('127.0.0.1:8000')
+    .browserSync(process.env.APP_URL)
     .sass('resources/sass/app.scss', 'public/css', {
         sassOptions: {
             importer: sassGlobImporter(),

@@ -1,4 +1,4 @@
-/*
+@import url(https://use.typekit.net/nxc2mvr.css);/*
 @font-face {
   font-family: '';
   src: url('./../fonts/.woff2') format('woff2'),
@@ -2694,11 +2694,11 @@
 }
 
 body {
-  font-family: "", serif;
+  font-family: "nimbus-sans", sans-serif;
   font-size: 1.8rem;
   line-height: 1.5;
-  font-weight: 400;
-  color: #2C2C2C;
+  font-weight: 300;
+  color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -2771,11 +2771,11 @@ p {
 
 .title {
   margin: 0;
-  font-family: "", sans-serif;
+  font-family: "orpheuspro", serif;
   font-size: 3.2rem;
   line-height: 1.2;
   font-weight: 400;
-  color: #2C2C2C;
+  color: white;
   /* Font-size */
   /* Font-weight */
   /* Colors */
@@ -2789,22 +2789,22 @@ p {
 }
 
 .title._extra-big {
-  font-size: 7.2rem;
+  font-size: 8rem;
 }
 
 @media all and (max-width: 480px) {
   .title._extra-big {
-    font-size: calc(7.2rem / 1.3);
+    font-size: calc(8rem / 1.3);
   }
 }
 
 .title._big {
-  font-size: 6.4rem;
+  font-size: 6.5rem;
 }
 
 @media all and (max-width: 480px) {
   .title._big {
-    font-size: calc(6.4rem / 1.3);
+    font-size: calc(6.5rem / 1.3);
   }
 }
 
@@ -2846,6 +2846,10 @@ p {
   .title._tiny {
     font-size: calc(1.6rem / 1.05);
   }
+}
+
+.title._300 {
+  font-weight: 300;
 }
 
 .title._700 {
