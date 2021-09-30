@@ -1,0 +1,19 @@
+{
+    "privacy": "©Matteo De Lorenzi 2021 </br>ALL RIGHTS RESERVED </br>Made with love <3",
+    "contact": {
+        "mail": {
+            "label": "Mail",
+            "url": ""
+        }
+    },
+    "socials": {
+        "instagram": {
+            "label": "Instagram",
+            "url": ""
+        },
+        "linkedin": {
+            "label": "Linkedin",
+            "url": ""
+        }
+    }
+}

@@ -5,3 +5,9 @@
 .u-full-width {
     width: 100%;
 }
+
+.u-text-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+    transform: rotate(180deg);
+}

@@ -1,0 +1,16 @@
+{
+    "sections": {
+        "about": {
+            "title": "About",
+            "content": ""
+        },
+        "work": {
+            "title": "Works",
+            "content": ""
+        },
+        "contact": {
+            "title": "Contact",
+            "content": "Feel free to send me <strong>love</strong> or just <strong>inqueries</strong>."
+        }
+    }
+}

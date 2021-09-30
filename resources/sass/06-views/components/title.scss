@@ -2,15 +2,15 @@
  * Auto generate classes for title and auto generate size title in text-content
  * class generate : '_#{name}'
 */
-$font-weight: ("300", "700");
-$font-size-default: 3.2rem;
+$font-weight: ("400", "700");
+$font-size-default: 1rem;
 $font-sizes: (
     "extra-big" : 8rem,
     "big" : 6.5rem,
-    "medium" : 4.6rem,
+    "medium" : 5.6rem,
     "default" : $font-size-default,
-    "small" : 1.8rem,
-    "tiny" : 1.6rem,
+    "small" : 1rem,
+    "tiny" : 1.4rem,
 );
 $colors: (
     "white" : white
@@ -18,10 +18,10 @@ $colors: (
 
 @mixin title-base(){
     margin: 0;
-    font-family: $typography-font-family-secondary;
+    font-family: $typography-font-family-main;
     font-size: $font-size-default;
-    line-height: 1.2;
-    font-weight: 400;
+    line-height: 1.1;
+    font-weight: 300;
     color: $color-main;
 
     @include bp-max-width($bp-mobile) {
@@ -68,5 +68,19 @@ $colors: (
 
     &._uppercase{
         text-transform: uppercase;
+    }
+
+    &._letter-spacing{
+        letter-spacing: 1px;
+    }
+
+    &._section-title{
+        margin: 0 0 6.4rem auto;
+    }
+
+    strong{
+        font-weight: 400;
+        text-transform: uppercase;
+        font-style: italic;
     }
 }

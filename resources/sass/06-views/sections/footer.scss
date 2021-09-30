@@ -1,0 +1,12 @@
+.footer{
+    padding: 2.4rem 0 5rem;
+
+    &__main{
+        @include wrap;
+    }
+
+    &__privacy{
+        font-size: 1.6rem;
+        line-height: 1.25;
+    }
+}

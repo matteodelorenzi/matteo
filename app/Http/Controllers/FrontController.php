@@ -9,11 +9,11 @@ use Illuminate\Routing\Controller as BaseController;
 
 class FrontController extends Controller
 {
-    protected ?string $route = "pages.front";
+    protected ?string $route = "front";
 
-    public function init(){
-        $data = [];
-
-        return view($this->route, $data);
+    public function init()
+    {
+        $data = parent::init();
+        return view("$this->folder/$this->route", $data);
     }
 }

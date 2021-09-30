@@ -1,5 +1,6 @@
 @extends("layouts.main")
 
 @section("content")
-    @component("components.sections.contact")@endcomponent
+    @include("components.sections.contact")
+    @include("components.sections.footer")
 @endsection
