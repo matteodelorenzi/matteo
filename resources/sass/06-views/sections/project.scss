@@ -1,0 +1,73 @@
+.project{
+    padding: 4.8rem 0;
+
+    &__main{
+        @include wrap;
+    }
+
+    &__head{
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        height: 100vh;
+        padding-top: 5rem;
+
+        @include bp-max-width($bp-tablet) {
+            position: relative;
+            padding-top: 0;
+            height: inherit;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__content{
+        @include bp-max-width($bp-tablet) {
+            display: none;
+        }
+    }
+
+    &__title{
+        white-space: nowrap;
+        margin-top: 12rem;
+    }
+
+    &__item{
+        width: 63rem;
+        position: relative;
+        max-width: 100%;
+
+        @include bp-max-width($bp-tablet) {
+            width: 100%;
+        }
+
+        @include not-last-child{
+            margin-bottom: 5rem;
+
+            @include bp-max-width($bp-tablet) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__index{
+        display: flex;
+        font-size: 6.5rem;
+        line-height: 1;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font-style: italic;
+        transform: translate(-1.4rem, 50%);
+
+        @include bp-max-width($bp-tablet) {
+            display: none;
+        }
+    }
+
+    &__picture{
+        width: 100%;
+        @include aspect-ratio(630, 440);
+        @include object-fit;
+    }
+}

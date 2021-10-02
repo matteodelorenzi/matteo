@@ -22,7 +22,8 @@ class Controller extends BaseController
     public function getContent(): array
     {
         $global = json_decode(file_get_contents(storage_path() . "/data/global.json"), true);
+        $projects = json_decode(file_get_contents(storage_path() . "/data/projects.json"), true);
         $page = json_decode(file_get_contents(storage_path() . "/data/$this->route.json"), true);
-        return array_merge($global, $page);
+        return array_merge($global, $page, $projects);
     }
 }

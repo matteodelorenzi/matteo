@@ -1,0 +1,60 @@
+{
+    "projects": [
+        {
+            "title": "Project 1",
+            "content": "Winter is a series of pictures taken during a journey in the Hautes Fagnes. Between lights play, grain work and contrast, this series tends to be artistic and mysterious.",
+            "pictures": [
+                {
+                    "src": "project-1.jpg",
+                    "alt": "project"
+                },
+                {
+                    "src": "project-2.jpg",
+                    "alt": "project"
+                }
+            ]
+        },
+        {
+            "title": "Project 2",
+            "content": "Winter is a series of pictures taken during a journey in the Hautes Fagnes. Between lights play, grain work and contrast, this series tends to be artistic and mysterious.",
+            "pictures": [
+                {
+                    "src": "project-1.jpg",
+                    "alt": "project"
+                },
+                {
+                    "src": "project-2.jpg",
+                    "alt": "project"
+                }
+            ]
+        },
+        {
+            "title": "Project 3",
+            "content": "Winter is a series of pictures taken during a journey in the Hautes Fagnes. Between lights play, grain work and contrast, this series tends to be artistic and mysterious.",
+            "pictures": [
+                {
+                    "src": "project-1.jpg",
+                    "alt": "project"
+                },
+                {
+                    "src": "project-2.jpg",
+                    "alt": "project"
+                }
+            ]
+        },
+        {
+            "title": "Project 4",
+            "content": "Winter is a series of pictures taken during a journey in the Hautes Fagnes. Between lights play, grain work and contrast, this series tends to be artistic and mysterious.",
+            "pictures": [
+                {
+                    "src": "project-1.jpg",
+                    "alt": "project"
+                },
+                {
+                    "src": "project-2.jpg",
+                    "alt": "project"
+                }
+            ]
+        }
+    ]
+}

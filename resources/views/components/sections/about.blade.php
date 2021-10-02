@@ -25,13 +25,9 @@
 
         @component("components.button", [
             "classes" => "about__next",
-            "label" => "Latests works",
-            "url" => "",
-        ])
-            @section("icon")
-                @component("components.svg.arrow")@endcomponent
-            @endsection
-        @endcomponent
+            "label" => "Latests work",
+            "url" => "#projects",
+        ])@endcomponent
 
     </div>
 </section>

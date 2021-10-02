@@ -5,7 +5,7 @@
 $font-weight: ("400", "700");
 $font-size-default: 1rem;
 $font-sizes: (
-    "extra-big" : 8rem,
+    "extra-big" : 9.2rem,
     "big" : 6.5rem,
     "medium" : 5.6rem,
     "default" : $font-size-default,
@@ -68,6 +68,10 @@ $colors: (
 
     &._uppercase{
         text-transform: uppercase;
+    }
+
+    &._italic{
+        font-style: italic;
     }
 
     &._letter-spacing{

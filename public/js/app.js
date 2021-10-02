@@ -96,8 +96,90 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_ScrollToHash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/ScrollToHash */ "./resources/js/utils/ScrollToHash.js");
+/* harmony import */ var _project__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./project */ "./resources/js/project.js");
+
 
 new _utils_ScrollToHash__WEBPACK_IMPORTED_MODULE_0__["default"]();
+new _project__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+/***/ }),
+
+/***/ "./resources/js/project.js":
+/*!*********************************!*\
+  !*** ./resources/js/project.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var _default = /*#__PURE__*/function () {
+  function _default() {
+    _classCallCheck(this, _default);
+
+    _defineProperty(this, "observer", void 0);
+
+    _defineProperty(this, "$elements", void 0);
+
+    this.init();
+  }
+
+  _createClass(_default, [{
+    key: "init",
+    value: function init() {
+      if (!IntersectionObserver) {// don't work
+      } else {
+        this.intersectionObserver();
+      }
+    }
+  }, {
+    key: "intersectionObserver",
+    value: function intersectionObserver() {
+      var _this = this;
+
+      this.$elements = document.querySelectorAll(".js-project-observer-item");
+      var options = {
+        root: null,
+        rootMargin: "-150px",
+        threshold: 1
+      };
+      this.observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var data = JSON.parse(entry.target.getAttribute("data-project"));
+
+            _this.updateDOM(data);
+          }
+        });
+      }, options);
+      this.$elements.forEach(function (target) {
+        _this.observer.observe(target);
+      });
+    }
+  }, {
+    key: "updateDOM",
+    value: function updateDOM(data) {
+      console.log(data);
+      var $title = document.querySelector(".js-project-title");
+      var $url = document.querySelector(".js-project-url");
+      $title.textContent = data.title;
+      $url.href = "";
+    }
+  }]);
+
+  return _default;
+}();
+
+
 
 /***/ }),
 

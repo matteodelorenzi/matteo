@@ -1,28 +1,28 @@
 .contact{
-    padding: 2.4rem 0;
+    padding: 2.4rem 0 12rem;
 
     &__main{
         @include wrap;
     }
 
     &__content{
-        max-width: 42rem;
-    }
-
-    &__links{
-        margin: 14rem 0 14rem var(--space-left-container);
-        display: flex;
-        align-items: center;
-
-        @include bp-max-width($bp-mobile) {
-            margin: 14rem 0;
-        }
+        max-width: 60rem;
     }
 
     &__arrow{
         width: 4rem;
         stroke: white;
         margin: 0 4.5rem .8rem 0;
+    }
+
+    &__links{
+        display: flex;
+        align-items: center;
+        margin: 22rem 0 0;
+
+        @include bp-max-width($bp-mobile) {
+            margin: 16rem 0 0;
+        }
     }
 
     &__list{
@@ -75,5 +75,9 @@
                 background-color: $color-primary;
             }
         }
+    }
+
+    .grid{
+        justify-content: flex-end;
     }
 }
