@@ -1,4 +1,4 @@
-<section class="contact">
+<section class="contact" id="contact">
     <div class="contact__main">
         <h2 class="title _tiny _uppercase _letter-spacing u-text-vertical _section-title">{!! $sections["contact"]["title"] !!}</h2>
         <h3 class="title _medium contact__content">{!! $sections["contact"]["content"] !!}</h3>

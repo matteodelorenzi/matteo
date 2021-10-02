@@ -86,14 +86,51 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/app.ts":
+/***/ "./resources/js/app.js":
 /*!*****************************!*\
-  !*** ./resources/js/app.ts ***!
+  !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_ScrollToHash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils/ScrollToHash */ "./resources/js/utils/ScrollToHash.js");
 
+new _utils_ScrollToHash__WEBPACK_IMPORTED_MODULE_0__["default"]();
+
+/***/ }),
+
+/***/ "./resources/js/utils/ScrollToHash.js":
+/*!********************************************!*\
+  !*** ./resources/js/utils/ScrollToHash.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (function () {
+  var elements = document.querySelectorAll("a");
+  elements.forEach(function (element) {
+    element.addEventListener("click", function (e) {
+      var hash = element.getAttribute("href");
+      var regex = new RegExp("#(.*)", "gi");
+
+      if (hash.match("#(.+)")) {
+        e.preventDefault();
+        hash = hash.replace(regex, "$1");
+        var targetElement = document.querySelector("#" + hash);
+
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth"
+          });
+        }
+      }
+    });
+  });
+});
 
 /***/ }),
 
@@ -110,12 +147,12 @@
 
 /***/ 0:
 /*!*************************************************************!*\
-  !*** multi ./resources/js/app.ts ./resources/sass/app.scss ***!
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
   \*************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/maximefondu/Clients/m/matteo/resources/js/app.ts */"./resources/js/app.ts");
+__webpack_require__(/*! /Users/maximefondu/Clients/m/matteo/resources/js/app.js */"./resources/js/app.js");
 module.exports = __webpack_require__(/*! /Users/maximefondu/Clients/m/matteo/resources/sass/app.scss */"./resources/sass/app.scss");
 
 

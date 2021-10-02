@@ -76,6 +76,10 @@ $colors: (
 
     &._section-title{
         margin: 0 0 6.4rem auto;
+
+        @include bp-max-width($bp-mobile) {
+            display: none;
+        }
     }
 
     strong{

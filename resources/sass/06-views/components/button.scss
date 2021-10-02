@@ -1,0 +1,48 @@
+.button{
+    --font-size: 2.4rem;
+    --font-weight: 300;
+    --color: white;
+    --color-hover: #{$color-red};
+    --border: White;
+    --border-hover: #{$color-red};
+
+    &._outline{
+        border: .6px solid var(--border);
+        padding: 1.4rem 3rem;
+        border-radius: 4.4rem;
+    }
+
+    &._round{
+        padding: 2.8rem 5.4rem;
+        border-radius: 50%;
+
+        @include event{
+            border-color: var(--border-hover);
+            color: var(--color-hover);
+        }
+    }
+
+    &._small{
+        --font-size: 1rem;
+        --font-weight: 700;
+    }
+
+    &._big{
+        --font-size: 3.2rem;
+    }
+
+    @include reset-style-button;
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    color: var(--color);
+    display: flex;
+    align-items: center;
+
+    svg{
+        stroke: var(--color);
+        stroke-width: 2px;
+        width: 1.8rem;
+        margin-left: 1rem;
+        transform: rotate(90deg);
+    }
+}

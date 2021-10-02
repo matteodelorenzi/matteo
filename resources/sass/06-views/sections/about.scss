@@ -1,0 +1,108 @@
+.about{
+    padding: 4.8rem 0;
+
+    @include bp-max-width($bp-mobile) {
+        padding: 14rem 0 5rem;
+    }
+
+    &__main{
+        @include wrap;
+    }
+
+    &__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include bp-max-width($bp-tablet) {
+            display: none;
+        }
+    }
+
+    &__content{
+        max-width: 100%;
+        position: relative;
+    }
+
+    &__picture{
+        @include aspect-ratio(600, 630);
+        @include object-fit;
+        width: 60rem;
+        max-width: 100%;
+
+        @include bp-max-width($bp-desktop) {
+            @include aspect-ratio(550, 630);
+        }
+    }
+
+    &__picture-mobile{
+        display: none;
+        margin-top: 5rem;
+
+        @include bp-max-width($bp-tablet) {
+            display: block;
+            @include aspect-ratio(360, 220);
+            @include object-fit;
+            width: 100%;
+            transform: translateX(#{$grid-default-gutter}px);
+        }
+
+        @include bp-max-width($bp-mobile) {
+            transform: translateX(#{$grid-default-gutter-mobile}px);
+        }
+    }
+
+    &__button{
+        position: absolute;
+        top: 6rem;
+        right: -5rem;
+
+        @include bp-max-width($bp-desktop) {
+            right: -2rem;
+        }
+    }
+
+    &__title{
+        margin: 0;
+        font-size: 6.8rem;
+        line-height: 1.1;
+        font-weight: 300;
+
+        @include bp-max-width($bp-desktop) {
+            font-size: 6.4rem;
+        }
+
+        @include bp-max-width($bp-tablet) {
+            text-align: right;
+        }
+
+        span{
+            font-style: italic;
+
+            &._secondary{
+                display: block;
+                font-family: $typography-font-family-secondary;
+            }
+        }
+    }
+
+    .text-content{
+        margin: 14rem 0 0 5rem;
+        width: 74rem;
+        position: relative;
+        z-index: 10;
+
+        @include bp-max-width($bp-desktop) {
+            width: 68rem;
+        }
+
+        @include bp-max-width($bp-tablet) {
+            margin: 5rem 0 0;
+            max-width: 100%;
+        }
+    }
+
+    &__next{
+        margin: 5rem 0 0 auto;
+    }
+}

@@ -12,11 +12,12 @@ const mix = require('laravel-mix');
  */
 const sassGlobImporter = require('node-sass-glob-importer');
 
-mix.js('resources/js/app.ts', 'public/js')
+mix.js('resources/js/app.js', 'public/js')
     .sourceMaps(false, 'source-map')
     .browserSync(process.env.APP_URL)
     .sass('resources/sass/app.scss', 'public/css', {
         sassOptions: {
             importer: sassGlobImporter(),
         }
-    });
+    })
+    mix.copy('resources/images', 'public/images');
