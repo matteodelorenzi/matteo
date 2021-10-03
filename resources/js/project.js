@@ -3,7 +3,10 @@ export default class {
     $elements
 
     constructor() {
+        this.$next = document.querySelector(".js-project-next")
+
         this.init()
+        this.next()
     }
 
     init(){
@@ -14,12 +17,20 @@ export default class {
         }
     }
 
+    next(){
+        if(this.$next){
+            this.$next.addEventListener("click", () => {
+                // next
+            })
+        }
+    }
+
     intersectionObserver(){
         this.$elements = document.querySelectorAll(".js-project-observer-item")
 
         const options = {
             root: null,
-            rootMargin: "-150px",
+            rootMargin: "0px",
             threshold: 1
         }
 
@@ -38,10 +49,10 @@ export default class {
     }
 
     updateDOM(data){
-        console.log(data)
         const $title = document.querySelector(".js-project-title")
         const $url = document.querySelector(".js-project-url")
         $title.textContent = data.title
         $url.href = ""
+        this.$next = data.index
     }
 }

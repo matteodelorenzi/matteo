@@ -5,6 +5,18 @@
         --font-size: 3.6rem;
     }
 
+    &._max-width{
+        width: 74rem;
+
+        @include bp-max-width($bp-desktop) {
+            width: 68rem;
+        }
+
+        @include bp-max-width($bp-tablet) {
+            max-width: 100%;
+        }
+    }
+
     &, p{
         font-size: var(--font-size);
         line-height: 1.2;

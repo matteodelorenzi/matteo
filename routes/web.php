@@ -14,3 +14,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', "FrontController@init");
+Route::get('/projects/{name}', "SingleController@init");

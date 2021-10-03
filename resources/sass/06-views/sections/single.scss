@@ -1,0 +1,68 @@
+.single{
+    padding: 4.8rem 0;
+
+    &__main{
+        @include wrap;
+    }
+
+    &__head{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 8rem;
+    }
+
+    &__close{
+        font-size: 1rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+
+        div{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            border: 1px solid $color-primary;
+            margin-left: 1.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg{
+                stroke: $color-primary;
+                width: 1.2rem;
+            }
+        }
+    }
+
+    .grid{
+        justify-content: flex-end;
+    }
+
+    &__list{
+        margin: 5rem 0 0;
+    }
+
+    &__item{
+        display: flex;
+
+        @include not-last-child{
+            margin-bottom: 5rem;
+        }
+
+        &:nth-child(2n){
+            justify-content: flex-end;
+        }
+    }
+
+    &__block{
+        width: 66rem;
+    }
+
+    &__picture{
+        @include aspect-ratio(660, 440);
+        @include object-fit;
+    }
+}

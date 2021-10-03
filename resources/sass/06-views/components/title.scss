@@ -12,9 +12,7 @@ $font-sizes: (
     "small" : 1rem,
     "tiny" : 1.4rem,
 );
-$colors: (
-    "white" : white
-);
+$colors: ();
 
 @mixin title-base(){
     margin: 0;

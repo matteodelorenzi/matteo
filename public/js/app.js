@@ -130,7 +130,9 @@ var _default = /*#__PURE__*/function () {
 
     _defineProperty(this, "$elements", void 0);
 
+    this.$next = document.querySelector(".js-project-next");
     this.init();
+    this.next();
   }
 
   _createClass(_default, [{
@@ -142,6 +144,14 @@ var _default = /*#__PURE__*/function () {
       }
     }
   }, {
+    key: "next",
+    value: function next() {
+      if (this.$next) {
+        this.$next.addEventListener("click", function () {// next
+        });
+      }
+    }
+  }, {
     key: "intersectionObserver",
     value: function intersectionObserver() {
       var _this = this;
@@ -149,7 +159,7 @@ var _default = /*#__PURE__*/function () {
       this.$elements = document.querySelectorAll(".js-project-observer-item");
       var options = {
         root: null,
-        rootMargin: "-150px",
+        rootMargin: "0px",
         threshold: 1
       };
       this.observer = new IntersectionObserver(function (entries) {
@@ -168,11 +178,11 @@ var _default = /*#__PURE__*/function () {
   }, {
     key: "updateDOM",
     value: function updateDOM(data) {
-      console.log(data);
       var $title = document.querySelector(".js-project-title");
       var $url = document.querySelector(".js-project-url");
       $title.textContent = data.title;
       $url.href = "";
+      this.$next = data.index;
     }
   }]);
 

@@ -88,17 +88,11 @@
 
     .text-content{
         margin: 14rem 0 0 5rem;
-        width: 74rem;
         position: relative;
         z-index: 10;
 
-        @include bp-max-width($bp-desktop) {
-            width: 68rem;
-        }
-
         @include bp-max-width($bp-tablet) {
             margin: 5rem 0 0;
-            max-width: 100%;
         }
     }
 

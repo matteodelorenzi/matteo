@@ -27,6 +27,35 @@
         }
     }
 
+    &__next{
+        @include reset-style-button;
+        display: flex;
+        align-items: center;
+        color: $color-primary;
+        font-size: 1rem;
+        line-height: 1;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        div{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            border: 1px solid $color-primary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 1.4rem;
+
+            svg{
+                stroke: $color-primary;
+                width: 1.6rem;
+                stroke-width: 2px;
+            }
+        }
+    }
+
     &__title{
         white-space: nowrap;
         margin-top: 12rem;

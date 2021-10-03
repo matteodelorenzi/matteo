@@ -1,5 +1,22 @@
 {
-    "privacy": "©Matteo De Lorenzi 2021 </br>ALL RIGHTS RESERVED </br>Made with love <3",
+    "sections": {
+        "about": {
+            "title": "About",
+            "content": "I’m a Brussels based <strong>junior Designer</strong>. As a student Freelancer, I mostly work <strong>with</strong> companies and individuals but I’m open to work on different projects with different people all over the world.",
+            "picture": {
+                "src": "matteo.jpg",
+                "alt": "Profil de Matteo de Lorenzi"
+            }
+        },
+        "project": {
+            "title": "Works",
+            "content": "Bunch of <strong>projets</strong>"
+        },
+        "contact": {
+            "title": "Contact",
+            "content": "Feel free to send me <strong>love</strong> or just <strong>inqueries</strong>."
+        }
+    },
     "contact": {
         "mail": {
             "label": "Mail",
@@ -15,5 +32,6 @@
             "label": "Linkedin",
             "url": ""
         }
-    }
+    },
+    "privacy": "©Matteo De Lorenzi 2021 </br>ALL RIGHTS RESERVED </br>Made with love <3"
 }
