@@ -4,6 +4,7 @@ export default class {
 
     constructor() {
         this.$next = document.querySelector(".js-project-next")
+        this.$elements = document.querySelectorAll(".js-project-observer-item")
 
         this.init()
         this.next()
@@ -19,15 +20,21 @@ export default class {
 
     next(){
         if(this.$next){
-            this.$next.addEventListener("click", () => {
-                // next
+            this.$next.addEventListener("click", (e) => {
+                const item = e.currentTarget
+                const index = parseInt(item.getAttribute("data-index"))
+
+                if(index >= this.$elements.length - 1){
+                    this.$elements[0].scrollIntoView({ behavior: "smooth", block: "center"})
+                }else{
+                    item.setAttribute("data-index", index + 1)
+                    this.$elements[index + 1].scrollIntoView({ behavior: "smooth", block: "center"})
+                }
             })
         }
     }
 
     intersectionObserver(){
-        this.$elements = document.querySelectorAll(".js-project-observer-item")
-
         const options = {
             root: null,
             rootMargin: "0px",
@@ -51,8 +58,10 @@ export default class {
     updateDOM(data){
         const $title = document.querySelector(".js-project-title")
         const $url = document.querySelector(".js-project-url")
+        const $category = document.querySelector(".js-project-category")
         $title.textContent = data.title
-        $url.href = ""
-        this.$next = data.index
+        $category.textContent = data.category
+        $url.href = data.url
+        this.$next.setAttribute("data-index", data.index)
     }
 }

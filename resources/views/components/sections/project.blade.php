@@ -6,11 +6,12 @@
                 <h3 class="title _medium">{!! $sections["project"]["content"] !!}</h3>
 
                 <div class="project__content">
+                    <span class="project__category js-project-category">{{$projects[0]["category"]}}</span>
                     <h4 class="title _uppercase _italic _extra-big project__title js-project-title">{{$projects[0]["title"]}}</h4>
-                    <div class="u-mt-40 u-flex u-justify-space-between u-align-i-center">
+                    <div class="u-mt-40 u-flex u-justify-space-between u-align-i-center u-full-width">
                         @component("components.button", [
                             "classes" => "_outline _small js-project-url",
-                            "url" => "",
+                            "url" => $projects[0]["url"],
                             "label" => "See the project",
                         ])@endcomponent
                         <button class="project__next js-project-next" data-index="0">

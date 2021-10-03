@@ -131,6 +131,7 @@ var _default = /*#__PURE__*/function () {
     _defineProperty(this, "$elements", void 0);
 
     this.$next = document.querySelector(".js-project-next");
+    this.$elements = document.querySelectorAll(".js-project-observer-item");
     this.init();
     this.next();
   }
@@ -146,17 +147,34 @@ var _default = /*#__PURE__*/function () {
   }, {
     key: "next",
     value: function next() {
+      var _this = this;
+
       if (this.$next) {
-        this.$next.addEventListener("click", function () {// next
+        this.$next.addEventListener("click", function (e) {
+          var item = e.currentTarget;
+          var index = parseInt(item.getAttribute("data-index"));
+
+          if (index >= _this.$elements.length - 1) {
+            _this.$elements[0].scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+          } else {
+            item.setAttribute("data-index", index + 1);
+
+            _this.$elements[index + 1].scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+          }
         });
       }
     }
   }, {
     key: "intersectionObserver",
     value: function intersectionObserver() {
-      var _this = this;
+      var _this2 = this;
 
-      this.$elements = document.querySelectorAll(".js-project-observer-item");
       var options = {
         root: null,
         rootMargin: "0px",
@@ -167,12 +185,12 @@ var _default = /*#__PURE__*/function () {
           if (entry.isIntersecting) {
             var data = JSON.parse(entry.target.getAttribute("data-project"));
 
-            _this.updateDOM(data);
+            _this2.updateDOM(data);
           }
         });
       }, options);
       this.$elements.forEach(function (target) {
-        _this.observer.observe(target);
+        _this2.observer.observe(target);
       });
     }
   }, {
@@ -180,9 +198,11 @@ var _default = /*#__PURE__*/function () {
     value: function updateDOM(data) {
       var $title = document.querySelector(".js-project-title");
       var $url = document.querySelector(".js-project-url");
+      var $category = document.querySelector(".js-project-category");
       $title.textContent = data.title;
-      $url.href = "";
-      this.$next = data.index;
+      $category.textContent = data.category;
+      $url.href = data.url;
+      this.$next.setAttribute("data-index", data.index);
     }
   }]);
 

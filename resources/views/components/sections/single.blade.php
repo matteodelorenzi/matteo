@@ -10,7 +10,7 @@
                     ])@endcomponent
                 </div>
             </a>
-            <h2 class="title _tiny _uppercase _letter-spacing u-text-vertical _section-title">categories</h2>
+            <h2 class="title _tiny _uppercase _letter-spacing u-text-vertical _section-title">{!! $category !!}</h2>
         </div>
 
         <h1 class="title _extra-big _italic">{!! $title !!}</h1>

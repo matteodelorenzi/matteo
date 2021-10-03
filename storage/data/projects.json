@@ -2,6 +2,7 @@
     "projects": [
         {
             "title": "Project 1",
+            "category": "Photography",
             "content": "Winter is a series of pictures taken during a journey in the Hautes Fagnes. Between lights play, grain work and contrast, this series tends to be artistic and mysterious.",
             "pictures": [
                 {
@@ -18,6 +19,7 @@
         },
         {
             "title": "Project 2",
+            "category": "Web",
             "content": "Winter is a series of pictures taken during a journey in the Hautes Fagnes. Between lights play, grain work and contrast, this series tends to be artistic and mysterious.",
             "pictures": [
                 {
@@ -34,6 +36,7 @@
         },
         {
             "title": "Project 3",
+            "category": "Photography",
             "content": "Winter is a series of pictures taken during a journey in the Hautes Fagnes. Between lights play, grain work and contrast, this series tends to be artistic and mysterious.",
             "pictures": [
                 {
@@ -50,6 +53,7 @@
         },
         {
             "title": "Project 4",
+            "category": "Photography",
             "content": "Winter is a series of pictures taken during a journey in the Hautes Fagnes. Between lights play, grain work and contrast, this series tends to be artistic and mysterious.",
             "pictures": [
                 {

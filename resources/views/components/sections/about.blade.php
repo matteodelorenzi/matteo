@@ -16,7 +16,7 @@
                         @component("components.button", [
                             "classes" => "about__button _round _outline _big",
                             "label" => "Send me love",
-                            "url" => "#contact",
+                            "url" => "#contact"
                         ])@endcomponent
                     </div>
                 </div>
@@ -27,6 +27,7 @@
             "classes" => "about__next",
             "label" => "Latests work",
             "url" => "#projects",
+            "icon" => "arrow"
         ])@endcomponent
 
     </div>

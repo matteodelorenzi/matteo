@@ -2,24 +2,25 @@
     --font-size: 2.4rem;
     --font-weight: 300;
     --color: white;
-    --color-hover: #{$color-red};
     --border: White;
-    --border-hover: #{$color-red};
+    --color-hover: #{$color-primary};
+    --border-hover: #{$color-primary};
 
     &._outline{
         border: .6px solid var(--border);
         padding: 1.4rem 3rem;
         border-radius: 4.4rem;
+
+        @include event{
+            transform: translateX(0);
+        }
     }
 
     &._round{
         padding: 2.8rem 5.4rem;
         border-radius: 50%;
-
-        @include event{
-            border-color: var(--border-hover);
-            color: var(--color-hover);
-        }
+        --color-hover: #{$color-red};
+        --border-hover: #{$color-red};
     }
 
     &._small{
@@ -39,12 +40,26 @@
     color: var(--color);
     display: flex;
     align-items: center;
+    transition: color 200ms ease-in-out, border 200ms ease-in-out, transform 400ms ease-in-out;
 
-    svg{
+    @include event{
+        color: var(--color-hover);
+        border-color: var(--border-hover);
+        transform: translateX(1.4rem);
+
+        .button__icon{
+            stroke: var(--color-hover);
+            transform: translateY(100%) rotate(90deg);
+            opacity: 0;
+        }
+    }
+
+    &__icon{
         stroke: var(--color);
         stroke-width: 2px;
         width: 1.8rem;
         margin-left: 1rem;
         transform: rotate(90deg);
+        transition: 200ms opacity ease-in-out, 300ms transform ease-in-out;
     }
 }

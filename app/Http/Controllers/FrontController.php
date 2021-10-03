@@ -14,6 +14,13 @@ class FrontController extends Controller
     public function init()
     {
         $data = parent::init();
+
+        $data["projects"] = collect($data["projects"])->map(function($project){
+            return array_merge($project, [
+                "url" => url("/") . "/projects/" . static::createSlug($project["title"])
+            ]);
+        });
+
         return view("$this->folder/$this->route", $data);
     }
 }
