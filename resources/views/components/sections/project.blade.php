@@ -29,8 +29,10 @@
                 <ul class="project__list">
                     @foreach($projects as $index => $project)
                         <li class="project__item js-project-observer-item" data-project="{{json_encode(array_merge($project, ["index" => $index]))}}">
-                            @component("components.picture", array_merge($project["pictures"][0], ["classes" => "project__picture"]))@endcomponent
-                            <span class="project__index">0{{ $index + 1 }}</span>
+                            <a href="{{ $project["url"] }}">
+                                @component("components.picture", array_merge($project["pictures"][0], ["classes" => "project__picture"]))@endcomponent
+                                <span class="project__index">0{{ $index + 1 }}</span>
+                            </a>
                         </li>
                     @endforeach
                 </ul>
