@@ -25,7 +25,7 @@
 
         @component("components.button", [
             "classes" => "about__next",
-            "label" => "Latests work",
+            "label" => "Latest works",
             "url" => "#projects",
             "icon" => "arrow"
         ])@endcomponent

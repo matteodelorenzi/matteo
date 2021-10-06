@@ -8,6 +8,12 @@ iframe {
 img {
   display: block;
   width: 100%;
+  filter: grayscale(100);
+  transition: all 1s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+img:hover{
+  filter: inherit;
 }
 
 .legend{

@@ -1,7 +1,7 @@
 {
     "projects": [
         {
-            "title": "Project 1",
+            "title": "Winter",
             "category": "Photography",
             "content": "Winter is a series of pictures taken during a journey in the Hautes Fagnes. Between lights play, grain work and contrast, this series tends to be artistic and mysterious.",
             "pictures": [
@@ -18,12 +18,12 @@
             ]
         },
         {
-            "title": "Project 2",
+            "title": "Sanserif",
             "category": "Web",
-            "content": "Winter is a series of pictures taken during a journey in the Hautes Fagnes. Between lights play, grain work and contrast, this series tends to be artistic and mysterious.",
+            "content": "Sanserif is a collective of young Brussels enthusiasts, specialized in the Digital World, striving to find innovative & durable solutions focused on user needs with the intention of creating unique experiences.",
             "pictures": [
                 {
-                    "src": "project-1.jpg",
+                    "src": "sanserif.jpg",
                     "alt": "project",
                     "legend": "legend"
                 },
@@ -35,12 +35,12 @@
             ]
         },
         {
-            "title": "Project 3",
-            "category": "Photography",
-            "content": "Winter is a series of pictures taken during a journey in the Hautes Fagnes. Between lights play, grain work and contrast, this series tends to be artistic and mysterious.",
+            "title": "Tout Hockey",
+            "category": "Web design & Branding",
+            "content": "Tout Hockey is a new Hockey store in Wavre. I was in charge of creating the branding and the web design. Tout Hockey want to break the rules and make the hockey available for everyone and not just rich peoples. The branding is open-minded, dynamic and athletic.",
             "pictures": [
                 {
-                    "src": "project-1.jpg",
+                    "src": "touthockey.jpg",
                     "alt": "project",
                     "legend": "legend"
                 },
@@ -52,12 +52,12 @@
             ]
         },
         {
-            "title": "Project 4",
-            "category": "Photography",
-            "content": "Winter is a series of pictures taken during a journey in the Hautes Fagnes. Between lights play, grain work and contrast, this series tends to be artistic and mysterious.",
+            "title": "Tiny Botanique",
+            "category": "Web design",
+            "content": "Tiny Botanique is a digital store who create unique homemade terrariums. You can also find beautifulls plants and lot of advice to take care of them.",
             "pictures": [
                 {
-                    "src": "project-1.jpg",
+                    "src": "tinybotanique.jpg",
                     "alt": "project",
                     "legend": "legend"
                 },

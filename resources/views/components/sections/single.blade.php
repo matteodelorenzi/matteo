@@ -13,7 +13,7 @@
             <h2 class="title _tiny _uppercase _letter-spacing u-text-vertical _section-title">{!! $category !!}</h2>
         </div>
 
-        <h1 class="title _extra-big _italic">{!! $title !!}</h1>
+        <h1 class="title _uppercase _extra-big _italic">{!! $title !!}</h1>
         <div class="text-content _max-width _big u-mt-140">{!! $content !!}</div>
 
         <div class="grid">
