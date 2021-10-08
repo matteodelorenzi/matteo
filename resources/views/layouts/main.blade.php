@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/css/app.css" rel="stylesheet">
     </head>
-    <body>
-        <main>
+    <body data-barba="wrapper">
+        <main data-barba="container">
             @yield("content")
         </main>
     </body>
