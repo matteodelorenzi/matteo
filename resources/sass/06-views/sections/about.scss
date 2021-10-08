@@ -1,5 +1,6 @@
 .about{
     padding: 4.8rem 0;
+    overflow: hidden;
 
     @include bp-max-width($bp-mobile) {
         padding: 14rem 0 5rem;
