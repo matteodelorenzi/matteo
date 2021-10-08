@@ -103,10 +103,6 @@
 
         @include not-last-child{
             margin-bottom: 5rem;
-
-            @include bp-max-width($bp-tablet) {
-                margin-bottom: 0;
-            }
         }
     }
 
