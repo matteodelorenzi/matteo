@@ -36,6 +36,11 @@
 
     &._big{
         --font-size: 3.2rem;
+
+        @include event {
+            background-color: inherit;
+            color: var(--color-hover);
+        }
     }
 
     @include reset-style-button;

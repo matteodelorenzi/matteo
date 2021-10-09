@@ -2876,6 +2876,15 @@ p {
 
 .button._big {
   --font-size: 3.2rem;
+  outline: none;
+}
+
+@media all and (min-width: 480px) {
+  .button._big:hover,
+  .button._big:active {
+    background-color: inherit;
+    color: var(--color-hover);
+  }
 }
 
 @media all and (min-width: 480px) {
