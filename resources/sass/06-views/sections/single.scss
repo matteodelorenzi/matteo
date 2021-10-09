@@ -23,10 +23,10 @@
 
         @include event{
             div{
-                background-color: white;
+                background-color: $color-main;
             }
             svg path{
-                stroke: black;
+                stroke: $color-grey600;
             }
         }
 

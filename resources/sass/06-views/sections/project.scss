@@ -44,10 +44,10 @@
 
         @include event{
             div{
-                background-color: white;
+                background-color: $color-main;
             }
             svg{
-                stroke: black;
+                stroke: $color-grey600;
             }
         }
 

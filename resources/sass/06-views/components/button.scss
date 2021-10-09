@@ -14,6 +14,8 @@
 
         @include event{
             transform: translateX(0);
+            background-color: $color-main;
+            color: $color-grey600;
         }
     }
 
@@ -29,6 +31,7 @@
         --font-weight: 400;
         text-transform: uppercase;
         letter-spacing: 1px;
+        transition: all 300ms ease-in-out;
     }
 
     &._big{
