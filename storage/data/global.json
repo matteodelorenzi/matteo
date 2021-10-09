@@ -2,7 +2,7 @@
     "sections": {
         "about": {
             "title": "About",
-            "content": "I’m a Brussels based <strong>junior Designer</strong>. As a freelance designer, I mostly work <strong>with</strong> companies and individuals but I’m open to work on different projects with different people all over the world.",
+            "content": "I’m a Brussels based <strong>junior Designer</strong>.<br>As a freelance designer, I mostly work <strong>with</strong> companies and individuals but I’m open to work on different projects with different people all over the world.",
             "picture": {
                 "src": "matteo.jpg",
                 "alt": "Profil de Matteo de Lorenzi"
