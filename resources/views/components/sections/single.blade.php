@@ -1,4 +1,4 @@
-<section class="single">
+<section class="single" data-barba="container">
     <div class="single__main">
 
         <div class="single__head">

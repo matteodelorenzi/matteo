@@ -27,6 +27,7 @@
         "@ashthornton/asscroll": "^2.0.2",
         "@barba/core": "^2.9.7",
         "@stimulus/webpack-helpers": "^2.0.0",
+        "animejs": "^3.2.1",
         "loader-utils": "^2.0.0",
         "node-sass-glob-importer": "^5.3.2",
         "stimulus": "^3.0.0"

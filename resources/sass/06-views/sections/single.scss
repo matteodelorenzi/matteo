@@ -21,6 +21,19 @@
         display: flex;
         align-items: center;
 
+        @include event{
+            div{
+                background-color: white;
+            }
+            svg path{
+                stroke: black;
+            }
+        }
+
+        div, svg {
+            transition: all 300ms ease-in-out;
+        }
+
         div{
             width: 5rem;
             height: 5rem;
