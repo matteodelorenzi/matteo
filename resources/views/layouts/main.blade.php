@@ -6,7 +6,7 @@
         <link href="/css/app.css" rel="stylesheet">
     </head>
     <body data-barba="wrapper">
-        <main data-barba="container">
+        <main data-barba="container" data-barba-namespace="default">
             @yield("content")
         </main>
     </body>

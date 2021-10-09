@@ -1,4 +1,4 @@
-<section class="about" data-barba="container">
+<section class="about">
     <div class="about__main">
 
         <h2 class="title _tiny _uppercase _letter-spacing u-text-vertical _section-title">{!! $sections["about"]["title"] !!}</h2>

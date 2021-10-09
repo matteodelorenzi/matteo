@@ -1,4 +1,4 @@
-<section class="project" id="projects" data-barba="container">
+<section class="project" id="projects">
     <div class="project__main">
         <h2 class="title _tiny _uppercase _letter-spacing u-text-vertical _section-title">{!! $sections["project"]["title"] !!}</h2>
         <div class="grid">

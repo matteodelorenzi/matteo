@@ -1,9 +1,16 @@
 import ScrollToHash from "./utils/ScrollToHash"
 import Project from "./project"
-import Barba from "./barba"
+import Router from "./Router"
 // import Asscroll from "./asscroll"
 
-new ScrollToHash()
-new Project()
-new Barba()
+
 // new Asscroll()
+
+document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+        new ScrollToHash()
+        new Project()
+        Router.init()
+    }
+)
