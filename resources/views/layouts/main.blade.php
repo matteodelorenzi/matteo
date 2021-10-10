@@ -6,6 +6,7 @@
         <link href="/css/app.css" rel="stylesheet">
     </head>
     <body data-barba="wrapper" asscroll-container>
+        <div class="rectangle"></div>
         <main data-barba="container" data-barba-namespace="default" asscroll>
             @yield("content")
         </main>

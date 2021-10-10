@@ -99,7 +99,15 @@
 
     &__next{
         margin: 5rem 0 0 0;
-        display: flex;
+        display: inline-block;
         justify-content: flex-end;
     }
+}
+
+.rectangle{
+    width: 32vw;
+    background-color: $color-grey600;
+    position: fixed;
+    height: 100%;
+    z-index: -1;
 }
