@@ -14,6 +14,26 @@
                     "src": "project-2.jpg",
                     "alt": "project",
                     "legend": "legend"
+                },
+                {
+                    "src": "project-6.jpg",
+                    "alt": "project",
+                    "legend": "legend"
+                },
+                {
+                    "src": "project-4.jpg",
+                    "alt": "project",
+                    "legend": "legend"
+                },
+                {
+                    "src": "project-7.jpg",
+                    "alt": "project",
+                    "legend": "legend"
+                },
+                {
+                    "src": "project-8.jpg",
+                    "alt": "project",
+                    "legend": "legend"
                 }
             ]
         },

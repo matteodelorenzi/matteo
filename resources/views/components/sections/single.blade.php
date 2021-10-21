@@ -25,9 +25,9 @@
                                 @component("components.picture", array_merge($picture, [
                                     "classes" => "single__picture"
                                 ]))@endcomponent
-                                @if($picture["legend"])
+                                {{-- @if($picture["legend"])
                                     <span class="legend">{!! $picture["legend"] !!}</span>
-                                @endif
+                                @endif --}}
                             </div>
                         </li>
                     @endforeach

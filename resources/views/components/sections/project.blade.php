@@ -1,9 +1,9 @@
-<section class="project" id="projects">
+<section class="project slide-js" id="projects">
     <div class="project__main">
         <h2 class="title _tiny _uppercase _letter-spacing u-text-vertical _section-title">{!! $sections["project"]["title"] !!}</h2>
         <div class="grid">
             <div class="grid__i--4-12 grid__i--12-12@tablet project__head">
-                <h3 class="title _medium">{!! $sections["project"]["content"] !!}</h3>
+                <h3 class="title _medium slide-js">{!! $sections["project"]["content"] !!}</h3>
 
                 <div class="project__content">
                     <span class="project__category js-project-category">{{$projects[0]["category"]}}</span>

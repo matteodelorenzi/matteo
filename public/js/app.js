@@ -15174,9 +15174,11 @@ try {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _barba_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @barba/core */ "./node_modules/@barba/core/dist/barba.umd.js");
-/* harmony import */ var _barba_core__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_barba_core__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/all.js");
+/* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/all.js");
+/* harmony import */ var _barba_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @barba/core */ "./node_modules/@barba/core/dist/barba.umd.js");
+/* harmony import */ var _barba_core__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_barba_core__WEBPACK_IMPORTED_MODULE_2__);
+var _rectangle;
+
 
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
@@ -15189,11 +15191,26 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
+function _classPrivateFieldInitSpec(obj, privateMap, value) { _checkPrivateRedeclaration(obj, privateMap); privateMap.set(obj, value); }
+
+function _checkPrivateRedeclaration(obj, privateCollection) { if (privateCollection.has(obj)) { throw new TypeError("Cannot initialize the same private elements twice on an object"); } }
+
+function _classPrivateFieldGet(receiver, privateMap) { var descriptor = _classExtractFieldDescriptor(receiver, privateMap, "get"); return _classApplyDescriptorGet(receiver, descriptor); }
+
+function _classExtractFieldDescriptor(receiver, privateMap, action) { if (!privateMap.has(receiver)) { throw new TypeError("attempted to " + action + " private field on non-instance"); } return privateMap.get(receiver); }
+
+function _classApplyDescriptorGet(receiver, descriptor) { if (descriptor.get) { return descriptor.get.call(receiver); } return descriptor.value; }
 
 
-/* harmony default export */ __webpack_exports__["default"] = (new ( /*#__PURE__*/function () {
+
+/* harmony default export */ __webpack_exports__["default"] = (new (_rectangle = /*#__PURE__*/new WeakMap(), /*#__PURE__*/function () {
   function Router() {
     _classCallCheck(this, Router);
+
+    _classPrivateFieldInitSpec(this, _rectangle, {
+      writable: true,
+      value: document.querySelector('.rectangle')
+    });
   }
 
   _createClass(Router, [{
@@ -15206,9 +15223,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      * @return {Promise<string>} The state of the fadeout.
      */
     function leave(container) {
+      var _this = this;
+
+      var leaving = container.querySelectorAll('.slide-js');
       return new Promise(function (resolve) {
-        gsap_all__WEBPACK_IMPORTED_MODULE_2__["gsap"].to(container, {
+        gsap_all__WEBPACK_IMPORTED_MODULE_1__["gsap"].timeline().to(_classPrivateFieldGet(_this, _rectangle), {
+          xPercent: -105,
+          ease: 'power3.inOut'
+        }).to(container, {
+          y: '-30px',
           opacity: 0,
+          duration: 1.25,
+          ease: 'power3.inOut',
           onComplete: function onComplete() {
             return resolve('completed');
           }
@@ -15225,10 +15251,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   }, {
     key: "enter",
     value: function enter(container) {
-      gsap_all__WEBPACK_IMPORTED_MODULE_2__["gsap"].fromTo(container, {
-        opacity: 0
+      var leaving = container.querySelectorAll('.slide-js');
+      console.log(leaving);
+      gsap_all__WEBPACK_IMPORTED_MODULE_1__["gsap"].timeline().to(_classPrivateFieldGet(this, _rectangle), {
+        xPercent: 0,
+        ease: 'power3.inOut'
+      }).fromTo(container, {
+        y: '30px',
+        opacity: 0,
+        ease: 'power3.inOut'
       }, {
-        opacity: 1
+        y: '0px',
+        opacity: 1,
+        duration: 1.25,
+        ease: 'power3.inOut'
       });
     }
     /**
@@ -15240,13 +15276,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   }, {
     key: "init",
     value: function init() {
-      var _this = this;
+      var _this2 = this;
 
-      _barba_core__WEBPACK_IMPORTED_MODULE_1___default.a.init({
+      _barba_core__WEBPACK_IMPORTED_MODULE_2___default.a.init({
         transitions: [{
           leave: function leave(_ref) {
             var current = _ref.current;
-            _this.fadeOut = _this.leave(current.container);
+            _this2.fadeOut = _this2.leave(current.container);
           },
           enter: function () {
             var _enter = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref2) {
@@ -15257,10 +15293,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     case 0:
                       next = _ref2.next;
                       _context.next = 3;
-                      return _this.fadeOut;
+                      return _this2.fadeOut;
 
                     case 3:
-                      _this.enter(next.container);
+                      _this2.enter(next.container);
 
                     case 4:
                     case "end":
@@ -15275,7 +15311,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             }
 
             return enter;
-          }()
+          }(),
+          once: function once() {
+            var loader = document.querySelector('.js-loader');
+            gsap_all__WEBPACK_IMPORTED_MODULE_1__["gsap"].to(loader, {
+              opacity: 0,
+              delay: 3
+            });
+          }
         }]
       });
     }

@@ -1,7 +1,9 @@
-import barba from '@barba/core'
 import { gsap } from 'gsap/all'
+import barba from '@barba/core'
 
 export default new class Router {
+
+  #rectangle = document.querySelector('.rectangle')
 
   /**
    * Leave the page.
@@ -10,11 +12,21 @@ export default new class Router {
    * @return {Promise<string>} The state of the fadeout.
    */
   leave(container) {
+    const leaving = container.querySelectorAll('.slide-js')
+    
     return new Promise(resolve => {
-      gsap.to(container, {
-        opacity: 0,
-        onComplete: () => resolve('completed')
-      })
+      gsap.timeline()
+        .to(this.#rectangle, {
+          xPercent: -105,
+          ease: 'power3.inOut'
+        })
+        .to(container, {
+          y: '-30px',
+          opacity: 0,
+          duration: 1.25,
+          ease: 'power3.inOut',
+          onComplete: () => resolve('completed')
+        })
     })
   }
 
@@ -25,13 +37,27 @@ export default new class Router {
    * @return {void} Nothing.
    */
   enter(container) {
-    gsap.fromTo(container, {
-      opacity: 0
-    }, {
-      opacity: 1
-    })
+    const leaving = container.querySelectorAll('.slide-js')
+    console.log(leaving)
+
+    gsap.timeline()
+      .to(this.#rectangle, {
+        xPercent: 0,
+        ease: 'power3.inOut'
+      })
+      .fromTo(container, {
+        y: '30px',
+        opacity: 0,
+        ease: 'power3.inOut'
+      }, {
+        y: '0px',
+        opacity: 1,
+        duration: 1.25,
+        ease: 'power3.inOut'
+      })
   }
 
+  
   /**
    * Initialize the application router.
    * 
@@ -46,6 +72,13 @@ export default new class Router {
         enter: async ({ next }) => {
           await this.fadeOut
           this.enter(next.container)
+        },
+        once() {
+          const loader = document.querySelector('.js-loader')
+          gsap.to(loader, {
+            opacity: 0,
+            delay: 3
+          })
         }
       }]
     })

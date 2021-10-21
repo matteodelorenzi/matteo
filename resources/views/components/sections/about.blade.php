@@ -5,12 +5,12 @@
 
         <div class="grid">
             <div class="grid__i--4-12 grid__i--5-12@desktop grid__i--12-12@tablet">
-                <h2 class="about__title"><span>M</span>atteo <span class="_secondary">De Lorenzi</span></h2>
+                <h2 class="about__title slide-js"><span>M</span>atteo <span class="_secondary">De Lorenzi</span></h2>
                 @component("components.picture", array_merge($sections["about"]["picture"], ["classes" => "about__picture-mobile"]))@endcomponent
-                <div class="text-content _big _max-width">{!! $sections["about"]["content"] !!}</div>
+                <div class="text-content _big _max-width slide-js">{!! $sections["about"]["content"] !!}</div>
             </div>
             <div class="grid__i--8-12 grid__i--7-12@desktop grid__i--12-12@tablet">
-                <div class="about__container">
+                <div class="about__container slide-js">
                     <div class="about__content">
                         @component("components.picture", array_merge($sections["about"]["picture"], ["classes" => "about__picture"]))@endcomponent
                         @component("components.button", [
